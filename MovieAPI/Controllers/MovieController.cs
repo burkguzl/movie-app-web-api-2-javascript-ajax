@@ -68,7 +68,7 @@ namespace MovieAPI.Controllers
 
         [HttpGet]
         [Route("delete/{id}")]
-        //DELETE : api/movies/{id}
+        //DELETE : api/movies/delete/{id}
         public IHttpActionResult Delete(int id)
         {
             var result = _movieService.Delete(id);
