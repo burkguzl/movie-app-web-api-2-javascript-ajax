@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Movies</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container ">
+
+        <div id="navbar-container">
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand">Movies</a>
+                <form class="form-inline">
+                    <button id="navbar-list-button" value="add" class="btn btn-outline-light my-2 my-sm-0 mr-2" type="button">Movie List</button>
+                    <button id="navbar-add-button" value="list" class="btn btn-outline-warning my-2 my-sm-0" type="button">Movie Add</button>
+                </form>
+            </nav>
+        </div>
+        
+<br><br><br>
+<span id="alert-message"></span>
+        <div id="movie-list-container">
+            <div class="row">
+                
+                <div class="card-group ">
+                    <div id="cardGroup"  class="row">
+
+                        <!-- <div class="card col-md-4 text-center mr-3">
+                            <img src="movieImg.png" class="card-img-top" alt="...">.
+                            <div><span>IMDb Rate </span><span class="badge badge-dark">9.7</span> <span>Type</span> <span class="badge badge-secondary"> <span>Drama</span></div>
+                            <div class="card-body">
+                                
+                              <h5 class="card-title">Esaretin Bedeli</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Frank Darabont</small></p>
+                              <div><button type="button" class="btn btn-secondary">Edit</button> <button type="button" class="btn btn-dark">Delete</button></div>
+                            </div>
+                          </div>
+                          <div class="card col-md-4 text-center mr-3">
+                            <img src="movieImg.png" class="card-img-top" alt="...">.
+                            <div><span>IMDb Rate </span><span class="badge badge-dark">9.7</span> <span>Type</span> <span class="badge badge-secondary"> <span>Drama</span></div>
+                            <div class="card-body">
+                                
+                              <h5 class="card-title">Esaretin Bedeli</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Frank Darabont</small></p>
+                              <div><button type="button" class="btn btn-secondary">Edit</button> <button type="button" class="btn btn-dark">Delete</button></div>
+                            </div>
+                          </div>
+                          <div class="card col-md-4 text-center mr-3">
+                            <img src="movieImg.png" class="card-img-top" alt="...">.
+                            <div><span>IMDb Rate </span><span class="badge badge-dark">9.7</span> <span>Type</span> <span class="badge badge-secondary"> <span>Drama</span></div>
+                            <div class="card-body">
+                                
+                              <h5 class="card-title">Esaretin Bedeli</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Frank Darabont</small></p>
+                              <div><button type="button" class="btn btn-secondary">Edit</button> <button type="button" class="btn btn-dark">Delete</button></div>
+                            </div>
+                          </div>
+                          <div class="card col-md-4 text-center mr-3">
+                            <img src="movieImg.png" class="card-img-top" alt="...">.
+                            <div><span>IMDb Rate </span><span class="badge badge-dark">9.7</span> <span>Type</span> <span class="badge badge-secondary"> <span>Drama</span></div>
+                            <div class="card-body">
+                                
+                              <h5 class="card-title">Esaretin Bedeli</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Frank Darabont</small></p>
+                              <div><button type="button" class="btn btn-secondary">Edit</button> <button type="button" class="btn btn-dark">Delete</button></div>
+                            </div>
+                          </div> -->                  
+                   <span id="child"></span>
+                        </div>   
+                      
+                </div>
+            
+            </div>
+        </div>
+        
+        <br><br>
+
+        <div id="movie-add-container">
+            <form id="movie-add-form">
+                <div class="form-group">
+                    <label for="Name">Movie Name</label>
+                    <input class="form-control" id="Name" name="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Description">Description</label>
+                    <input class="form-control" id="Description" name="Description">
+                </div>
+                <div class="form-group">
+                    <label for="Type">Type</label>
+                    <input class="form-control" id="Type" name="Type">
+                </div>
+                <div class="form-group">
+                    <label for="Director">Director</label>
+                    <input class="form-control" id="Director" name="Director">
+                </div>
+                <div class="form-group">
+                    <label for="IMDbRate">IMDb Rate</label>
+                    <input class="form-control" id="IMDbRate" name="IMDbRate">
+                </div>
+                <button type="submit" class="btn btn-dark">Add</button>
+            </form>
+        </div>
+
+        <br><br>
+
+        <div id="movie-update-container">
+            <form id="movie-update-form">
+                <div class="form-group">
+                    <label for="UMovieId">Movie Id</label>
+                    <input class="form-control" id="UMovieId" name="UMovieId" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="UName">Movie Name</label>
+                    <input class="form-control" id="UName" name="UName">
+                </div>
+                <div class="form-group">
+                    <label for="UDescription">Description</label>
+                    <input class="form-control" id="UDescription" name="UDescription">
+                </div>
+                <div class="form-group">
+                    <label for="UType">Type</label>
+                    <input class="form-control" id="UType" name="UType">
+                </div>
+                <div class="form-group">
+                    <label for="UDirector">Director</label>
+                    <input class="form-control" id="UDirector" name="UDirector">
+                </div>
+                <div class="form-group">
+                    <label for="UIMDbRate">IMDb Rate</label>
+                    <input class="form-control" id="UIMDbRate" name="UIMDbRate">
+                </div>
+                <button type="submit" class="btn btn-dark">Update</button>
+            </form>
+        </div>
+        
+        <br><br>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="ui.js"></script>
+    <script src="movie.js"></script>
+    <script src="app.js"></script>
+
+</body>
